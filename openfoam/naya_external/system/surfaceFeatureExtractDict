@@ -1,0 +1,15 @@
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class dictionary;
+    location "system";
+    object surfaceFeatureExtractDict;
+}
+
+naya_concept.stl
+{
+    extractionMethod extractFromSurface;
+    extractFromSurfaceCoeffs { includedAngle 150; }
+    writeObj yes;
+}

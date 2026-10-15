@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# UNTESTED starter script: needs OpenFOAM.com-compatible distribution installed.
+set -euo pipefail
+cd "$(dirname "$0")"
+for binary in blockMesh surfaceFeatureExtract snappyHexMesh checkMesh simpleFoam; do
+  command -v "$binary" >/dev/null || { echo "Missing OpenFOAM command: $binary" >&2; exit 1; }
+done
+[[ -f constant/triSurface/naya_concept.stl ]] || { echo 'Missing STL' >&2; exit 1; }
+blockMesh > log.blockMesh 2>&1
+surfaceFeatureExtract > log.surfaceFeatureExtract 2>&1
+snappyHexMesh -overwrite > log.snappyHexMesh 2>&1
+checkMesh -allTopology -allGeometry > log.checkMesh 2>&1
+# Inspect log.checkMesh, inspect the surface patches and boundary layer resolution.
+# Successful checkMesh alone does NOT establish acceptable near-wall y+ or validity.
+simpleFoam > log.simpleFoam 2>&1
+echo 'Solving finished; inspect residuals, forces, force convergence and flow fields.'

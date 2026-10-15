@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use the original material in this research portfolio, cite it as follows."
+title: "NAYA | Rocket Aerodynamics and Numerical Flow Modelling"
+authors:
+  - family-names: Bourke
+    given-names: James
+version: "0.1.0"
+date-released: "2026-10-15"
+type: software
+abstract: "NAYA-inspired concept geometry, introductory 2D potential-flow computation and an unvalidated 3D external RANS starter case. Not an as-built rocket CFD validation."
+license: MIT

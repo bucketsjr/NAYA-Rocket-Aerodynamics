@@ -1,0 +1,15 @@
+{
+  "nx": 400,
+  "ny": 200,
+  "dx": 0.01,
+  "dy": 0.0072,
+  "freestream": 15.0,
+  "iterations": 756,
+  "residual": 9.713325532141651e-10,
+  "probe_x": -0.05499999999999994,
+  "probe_y": 0.19079999999999997,
+  "probe_cp": 0.023706719561601863,
+  "probe_speed": 14.821133158387033,
+  "model": "2D inviscid irrotational potential flow; finite-volume Laplace equation",
+  "status": "NEW numerical surrogate computation; not 3D viscous CFD or historic SEM400/NAYA results"
+}

@@ -1,0 +1,17 @@
+{
+  "data_status": "assumed geometry except length",
+  "units": "SI",
+  "parameters": {
+    "length_m": 0.885,
+    "body_radius_m": 0.045,
+    "nose_length_m": 0.21,
+    "tail_taper_length_m": 0.045,
+    "tail_radius_m": 0.033,
+    "fin_start_m": 0.17,
+    "fin_sweep_m": 0.085,
+    "fin_end_m": 0.41,
+    "fin_outer_radius_m": 0.135,
+    "fin_thickness_m": 0.004,
+    "fin_count": 4
+  }
+}
